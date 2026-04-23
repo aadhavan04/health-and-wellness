@@ -20,9 +20,9 @@ function Workout() {
 
  
   const fetchWorkouts = async () => {
-    const res = await axios.get(
-      `http://localhost:5000/api/workout/${currentUser.email}`
-    );
+const res = await axios.get(
+  `https://health-and-wellness-1-cx6w.onrender.com/api/workout/${currentUser.email}`
+);
     setWorkouts(res.data);
   };
 
@@ -32,7 +32,10 @@ function Workout() {
 
   
   const handleAdd = async () => {
-    await axios.post("http://localhost:5000/api/workout/add", data);
+    await axios.post(
+  "https://health-and-wellness-1-cx6w.onrender.com/api/workout/add",
+  data
+);
     alert("Workout Added");
     fetchWorkouts();
   };
