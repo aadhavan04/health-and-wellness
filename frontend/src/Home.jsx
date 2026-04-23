@@ -30,8 +30,8 @@ function Home() {
     if (!currentUser) return;
 
     const res = await axios.get(
-      `http://localhost:5000/api/workout/${currentUser.email}`
-    );
+  `https://health-and-wellness-1-cx6w.onrender.com/api/workout/${currentUser.email}`
+);
     setWorkouts(res.data);
   };
 
